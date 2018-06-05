@@ -1,0 +1,11 @@
+/*
+
+This page styles both color and format of the HTML page 
+
+*/
+
+body {background-color: yellowgreen; }
+
+h1 {font-size: 48; color: red ;}
+
+h2 {font-size: 36; color: red ;}
