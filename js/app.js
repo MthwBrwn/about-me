@@ -1,14 +1,14 @@
-'use strict'
+'use strict';
 
-var moveOnRight = 'That\'s Correct! Let\'s Move On!!'
-var moveOnWrong = 'That\s not quite right, keep going! '
-var notYesNo = 'Hmmm, Try a Yes or No '
+var moveOnRight = 'That\'s Correct! Let\'s Move On!!';
+var moveOnWrong = 'That\s not quite right, keep going!';
+var notYesNo = 'Hmmm, Try a Yes or No ';
 
 var newUser = prompt('Thank you for visiting! What\'s your name?', 'guest');
   console.log ('user name is:', newUser);
 
 if (newUser.toLowerCase () === 'guest'){
-  alert('Guest is a boring name, but I respect your privacy!')
+  alert('Guest is a boring name, but I respect your privacy!');
 } else { 
   alert('Welcome ' + newUser + '! Let\'s get to know Matthew!');
 }
