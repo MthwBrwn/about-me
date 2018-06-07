@@ -119,26 +119,33 @@ if (i=== 6) {
   alert ('you\'ve ran out of guesses!  Refresh the page and Try again !' ); 
 }
   
-  var worldGDP = ['liechtenstein','qatar','monaco','macau','luxembourg','falkland islands','singapore'];
-  var triviaNum = worldGDP.length;
-  console.log (triviaNum);
+var worldGdp = ['liechtenstein','qatar','monaco','macau','luxembourg','falkland islands','singapore'];
+  // var triviaNum = worldGDP.length;
+  // console.log (triviaNum);
   
-  var triviaGuess = prompt('Matthew is also a big fan of Trivia.  Here is a trivia question for you. Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a ntion divided by the number of people');
-  var guessCount =0;
+var triviaGuess = prompt('Matthew is also a big fan of Trivia.  Here is a trivia question for you. Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a nation divided by the number of people');
 
-while  (guessCount < 6){
-  for(var i =0 ; i < triviaNum; i++){
-    console.log(worldGDP[i]);
-    if (worldGDP[i] === triviaGuess){
-      alert('yes');
-    } else {
-      triviaGuess = prompt('guess again!');
-      guessCount++;
-    }
+
+var trivCount=0;
+
+for(var i = 0; i < worldGdp.length; i++){
+// console.log(worldGdp[i]);
+// console.log(triviaGuess);
+  if (true === worldGdp.includes(triviaGuess)) {
+  alert('yes');
+  rightCount++;
+  break;
+    
+}else{
+triviaGuess = prompt('Please guess again. you have ' + (5-i) + ' guesses left');
+trivCount++;
+  if (trivCount > 4){
+  alert('you are out of tries!!!'); 
+  break;
   }
-  
-  
-}
 
-  
+// console.log(worldGDP[i]);
+// console.log(triviaGuess);
+}
+}  
 alert('thank you taking the time to learna about Matthew.  You have ' + rightCount + ' questions answered correctly');
