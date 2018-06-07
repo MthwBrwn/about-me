@@ -96,34 +96,28 @@ for (var i = 0 ; i <6 ; i++){
   var intGuess= parseInt(goodGuess);
   console.log(i);
   if ( intGuess > randoNum ){
-    alert(newUser + 'My number is lower than yours');
+    alert(newUser + ' My number is lower than yours');
     goodGuess = prompt('Try again');
   } else if ( intGuess < randoNum ){
-    alert(newUser + 'my number is larger than yours');
+    alert(newUser + ' my number is larger than yours');
     goodGuess = prompt('Try again');
   } else if (intGuess === randoNum){
     alert (newUser + 'you have the correct number!!!'); 
     break;
   } else {
     alert('Something went wrong ' + newUser + ', refresh the page and try again!!!');
-    
+    goodGuess = prompt('Try again');
   } 
 }
 if (i=== 6) {
   alert ('you\'ve ran out of guesses!  Refresh the page and Try again !' ); 
 }
-  ;
-var worldGDP = [Liechtenstein,Qatar,Monaco,Monaco,Macau,Luxembourg,Falkland Islands,Singapore];
+  
+  var worldGDP = ['liechtenstein','qatar','monaco','macau','luxembourg','falkland islands','singapore'];
+  var triviaNum = worldGDP.length;
+  console.log (triviaNum);
+  
+  var triviaGuess = prompt('Matthew is also a big fan of Trivia.  Here is a trivia question for you. Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a ntion divided by the number of people');
+  
 
-
-
-
-
-
-
-
-
-
-// question 7 - 
-
- var endAlert= alert('That\'s the end.  Thank you for taking the time to get to know Matthew');
+  
