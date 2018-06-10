@@ -3,15 +3,39 @@
 This page styles both color and format of the HTML page 
 
 */
- body {
-  margin: 0px}
+body {
+  margin: 0px
 
+}
+
+  
 header {
   background-color: rgb(154, 158, 145); 
   border-width: 8px; 
   border-style: groove; 
   border-color: black ;
-  border-radius: 5px, 10px, 5px, 10px; /* top, right , bottom left */ 
+  border-radius: 5px 10px 5px 10px; /* top, right , bottom left */ 
+}
+
+section {
+  border-width: 4px; 
+  margin: 10px;
+  border-style: solid; 
+  border-color: black ;
+}
+
+aside {
+  border-width: 4px; 
+  margin: 10px;
+  border-style: groove; 
+  border-color: black ;
+}
+
+article {
+border-width: 4px;
+margin: 10px ;
+border-style: groove; 
+border-color: black ;
 }
 
 h1 {
@@ -25,21 +49,36 @@ h2 {
   color: red ;
 }
 
-section {
-  margin: 0px
+h3 {
+margin: 0px;
+border-width: 8px; 
+border-style: groove; 
+border-color: black ;
 }
 
-h3 {
-  margin: 0px
+h4 {
+font-size: 18px;
 }
 
 p {
-  margin: 0px
+margin: 0px;
 }
+
+ul {
+
+}
+ol {
+
+}
+
 .ques {
-  margin: 0px
+margin: 0px;
 }
 
 .ans {
-  margin: 0px
+margin: 0px;
+}
+
+.job {
+
 }
