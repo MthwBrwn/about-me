@@ -3,9 +3,6 @@
 
 
 // all global variables ------------------
-var moveOnRight = 'That\'s Correct! Let\'s Move On!! ';
-var moveOnWrong = 'That\'s not quite right, keep going! ';
-var notYesNo = 'Hmmm, Try a Yes or No ';
 var rightCount = 0;
 var triesCount = 0;
 
@@ -24,7 +21,7 @@ var msgFrom = 'Matthew is one of the few people in Seattle born in Seattle, but 
 var msgSports = ' Matthew is not a fan of team sports, so he won\'t be watching the M\'s but he loves a good game.';
 
 var trivGDP = 'Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a nation divided by the number of people';
-var arrayGDP = ['liechtenstein','qatar','monaco','macau','luxembourg','falkland islands','singapore'];
+var arrayGDP = ['liechtenstein', 'qatar','monaco', 'macau', 'luxembourg ', 'falkland islands', 'singapore'];
 //---------------------
 
 // intro prompt
@@ -44,21 +41,22 @@ var scoreAlert = function (){
 };
 
 // function for basic yes/no questions. was able to make drier with flip which input should be y or n 
+
 function persQues( question, message, flip){
   var userInput = prompt(question).toLowerCase(); 
   console.log (newUser + ' guessed', userInput );
   if (userInput.startsWith('n')||userInput.startsWith('y') ) {
     if (userInput.startsWith(flip)) {
-      confirm( moveOnRight +' ' +message);
+      confirm( 'That\'s Correct! ' +message + ' Let\'s keep going!');
       rightCount = rightCount+1;
       scoreAlert();
     
     } else  {
-      confirm (moveOnWrong +' '+message);
+      confirm ('That\'s not quite right, but keep going! ' +' '+message);
       scoreAlert(); 
     }
   }else{
-    alert (notYesNo);
+    alert ('Hmmm, Try a Yes or No ');
   }
 }
 
@@ -69,7 +67,6 @@ function getRandomInt(max) {
 
 //function for guess game
 function gameGuess(guess, tries){
-  var numGuess = 0;
   var i = 0;
 
   var randoNum = getRandomInt(guess); 
