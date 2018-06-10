@@ -18,10 +18,10 @@ var QuesSports = 'So Matthew is from Seattle. Does Matthew watch the M\'s?';
 
 // info/filler for user engagement 2nd pos. persQues 
 var msgCode = 'Prior to CodeFellows, Matthew had never attended a coding school.';
-var msgSign = 'Matthew is not a fire sign. Matthew is a Cancer which makes him a water sign, but you can still be friends. ';
+var msgSign = 'Matthew is not a fire sign. Matthew was born on June 25th which makes him a Cancer and a water sign. Matthew does not palce much value on Zodialogical signs , so you can still be friends (even if you are a fire sign). ';
 var msgCook = 'Matthew enjoys cooking very much and is always looking for a new recipe to try.';
 var msgFrom = 'Matthew is one of the few people in Seattle born in Seattle, but he likes meeting new people no matter where they are from.';
-var msgSports = 'Matthew just asked "who are the M\'s?". Matthew is not a fan of team sports but loves a good game.';
+var msgSports = ' Matthew is not a fan of team sports, so he won\'t be watching the M\'s but he loves a good game.';
 
 var trivGDP = 'Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a nation divided by the number of people';
 var arrayGDP = ['liechtenstein','qatar','monaco','macau','luxembourg','falkland islands','singapore'];
@@ -112,7 +112,7 @@ function triviaGuess (trivType, trivArray) {
   for(var i = 0; i < trivArray.length; i++){
     console.log(trivArray[i]);
     console.log('user input :', guess);
-    var guessDown = (guess).toLowerCase ;
+    var guessDown = (guess).toLowerCase ();
     console.log('guess after transform :',guessDown);
     
     if (trivArray.includes(guessDown)) {
@@ -139,14 +139,14 @@ function triviaGuess (trivType, trivArray) {
   
 //function calls for first five Qs
 
-// persQues(QuesCode, msgCode, 'y');
-// persQues(QuesSign, msgSign, 'n');
-// persQues(QuesCook, msgCook, 'y');
-// persQues(QuesFrom, msgFrom, 'y');
-// persQues(QuesSports, msgSports, 'n');
-// // two calls for guessing game 
-// gameGuess(64, 6);
-// gameGuess(4096, 12);
+persQues(QuesCode, msgCode, 'y');
+persQues(QuesSign, msgSign, 'n');
+persQues(QuesCook, msgCook, 'y');
+persQues(QuesFrom, msgFrom, 'y');
+persQues(QuesSports, msgSports, 'n');
+// two calls for guessing game 
+gameGuess(64, 6);
+gameGuess(4096, 12);
 
 //one call for trivia
 triviaGuess (trivGDP, arrayGDP);
