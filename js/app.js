@@ -15,11 +15,14 @@ var QuesCook = 'Does Matthew enjoy cooking?';
 var QuesFrom = 'Is Matthew from Seattle?';
 var QuesSports = 'So Matthew is from Seattle. Does Matthew watch the M\'s?';
   // info/filler for user engagement 2nd pos. persQues 
-var msgCode = 'Prior to CodeFellows Matthew had not attended a coding school';
-var msgSign = 'Prior to CodeFellows Matthew had not attended a coding school';
-var msgCook = 'Matthew enjoys cooking very much and is always looking for a new recipe to try';
+var msgCode = 'Prior to CodeFellows, Matthew had never attended a coding school.';
+var msgSign = 'Matthew is not a fire sign. Matthew is a Cancer which make him a water sign but you can still be friends. ';
+var msgCook = 'Matthew enjoys cooking very much and is always looking for a new recipe to try.';
 var msgFrom = 'Matthew is one of the few people in Seattle born in Seattle, but he likes meeting new people no matter where they are from.';
-var msgSports = '';
+var msgSports = 'Matthew would ask who are the M\'s? Matthew is not a fan of team sports but loves a good game.';
+
+var trivGDP = 'Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a nation divided by the number of people';
+var arrayGDP
 //---------------------
 
 // intro prompt
@@ -39,7 +42,7 @@ var scoreAlert = function (){
 };
 
 // function for basic yes/no questions. was able to make drier with flip which input should be y or n 
-var persQues = function ( question, message, flip){
+function persQues( question, message, flip){
   var userInput = prompt(question).toLowerCase(); 
   console.log (newUser + ' guessed', userInput );
   if (userInput.startsWith('n')||userInput.startsWith('y') ) {
@@ -55,27 +58,28 @@ var persQues = function ( question, message, flip){
   }else{
    alert (notYesNo);
   }
-};
+}
 
 //function for random gen'n of number between 1-64
-var randomNumber = function getRandomInt(max) {
+function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
   };
 
   //function for guess game
-  var gameGuess = function(){
-    var numGuess = 0;
-    var randoNum = randomNumber(64); 
-    var goodGuess =prompt(newUser + ', I\'d like to play a game . You have 6 tries. Think of a number between 1 and 64.', '1-64');
-    //need to take string and turn to integer
-    
-   
-  // if(IntGuess > 1) {  
-    for (var i = 0 ; i <6 ; i++){
-      var intGuess= parseInt(goodGuess);
-      console.log('iteration : ', i);
-      console.log(newUser +'guessed ' + intGuess);
-      console.log('random number is : '+ randoNum);
+function gameGuess(guess, tries){
+var numGuess = 0;
+var i = 0;
+
+var randoNum = getRandomInt(guess); 
+var goodGuess =prompt(newUser + ', I\'d like to play a game . You have ' +tries+ ' tries. Think of a number between 1 and ' +guess+'.', '1-'+guess);
+
+  for (i = 0 ; i < tries ; i++){
+  //need to take string and turn to integer
+  var intGuess= parseInt(goodGuess);
+  console.log('iteration : ', i);
+  console.log(newUser +'guessed ' + intGuess);
+  console.log('random number is : '+ randoNum);
+  console.log ('number of tries : ' , tries);   
       if ( intGuess > randoNum ){
         alert(newUser + ' My number is lower than yours');
         goodGuess = prompt('Try again');
@@ -89,58 +93,30 @@ var randomNumber = function getRandomInt(max) {
       } else {
         alert('Something went wrong ' + newUser + ', try using a number ');
         goodGuess = prompt('Try again');
+      }
+      if ( tries === i) {
+        alert ('you\'ve ran out of guesses!  Refresh the page and Try again !' ); 
       } 
     }
-    if (i=== 6) {
-      alert ('you\'ve ran out of guesses!  Refresh the page and Try again !' ); 
-    }
-  // }else {
-  //   alert ('try using a number');
+  }
+ 
 
-  // }
-  };
   
   
 //function calls for first five Qs
 persQues(QuesCode, msgCode, 'y');
-gameGuess();
+persQues(QuesSign, msgSign, 'n');
+persQues(QuesCook, msgCook, 'y');
+persQues(QuesFrom, msgFrom, 'y');
+persQues(QuesSports, msgSports, 'n');
+gameGuess(64, 6);
+gameGuess(4096, 12);
 
+function triviaGuess (trivType, trivArray) {
+  var guess = prompt('Matthew is a big fan of Trivia.  Here is a trivia question for you. ' + trivType);
 
-
-
-
-// var triviaGuess = prompt('Matthew is also a big fan of Trivia.  Here is a trivia question for you. Please come up with one of the top 7 countries in order of Gross Domestic Product (GDP) per capita.  This is the measured wealth of a nation divided by the number of people');
-
-
-
-
-
-
-// var nextNewFunction = function (){
-//   var randoNum = getRandomInt(64);
-//   // this function is being used solely for a random number
-//   console.log('the random number is ' +randoNum);
-// }  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-  
-
+}
+// 
 
 // var worldGdp = ['liechtenstein','qatar','monaco','macau','luxembourg','falkland islands','singapore'];
 //   // var triviaNum = worldGDP.length;
@@ -171,4 +147,4 @@ gameGuess();
 // // console.log(triviaGuess);
 // }
 // }
-// alert('thank you taking the time to learna about Matthew.  You have ' + rightCount + ' questions answered correctly');
+// alert('thank you taking the time to learn about Matthew.  You have ' + rightCount + ' questions answered correctly');

@@ -11,7 +11,7 @@ header {
   border-width: 8px; 
   border-style: groove; 
   border-color: black ;
-  border-radius: 5px, 10px, 5px, 10px; /* top, right , bottom left */ 
+  border-radius: 5px 10px 5px 10px; /* top, right , bottom left */ 
 }
 
 h1 {
@@ -26,11 +26,22 @@ h2 {
 }
 
 section {
-  margin: 0px
+  border-width: 8px; 
+  border-style: groove; 
+  border-color: black ;
+}
+
+article {
+  border-width: 8px; 
+  border-style: groove; 
+  border-color: black ;
 }
 
 h3 {
   margin: 0px
+  border-width: 8px; 
+  border-style: groove; 
+  border-color: black ;
 }
 
 p {
