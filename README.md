@@ -15,3 +15,15 @@ This uses a reset by meyerweb
 http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+
+   photo - black and white 
+   CC0 License
+✓ Free for personal and commercial use
+✓ No attribution required
+https://www.pexels.com/photo/kick-chess-piece-standing-131616/
+
+Color palette - found at canva.com 
+Pale Gold #C0B283
+Silk #DCD0C0
+Paper#F4F4F4
+Charcoal #373737
