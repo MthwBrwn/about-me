@@ -22,7 +22,7 @@ http://meyerweb.com/eric/tools/css/reset/
 ✓ No attribution required
 https://www.pexels.com/photo/kick-chess-piece-standing-131616/
 
-Color palette - found at canva.com 
+Color palette - found at canva.com -original color scheme credtied to The Martin Agency - "muted tones"
 Pale Gold #C0B283
 Silk #DCD0C0
 Paper#F4F4F4
