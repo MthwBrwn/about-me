@@ -24,7 +24,6 @@ a {
 
 header {
   width: 950px;
-  margin: 0;
   height: 130px ;
   background-color: #373737; 
   border-width: 8px; 
@@ -92,7 +91,7 @@ h3 {
 background-color: #373737;
   font-family: 'Covered By Your Grace', cursive;
 color: #c0b283 ;
-font-size: 20 px;
+font-size: 25 px;
 height: 50px; 
 }
 
@@ -118,7 +117,11 @@ margin-bottom: 20px;
 
 .job {
   font-style: bold;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.job ul {
+  font-size : 14px;
 }
 
 #headshot {
