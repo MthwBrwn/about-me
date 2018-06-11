@@ -4,17 +4,23 @@ This page styles both color and format of the HTML page
 
 */
 body {
-  margin: 0px
+  background-image: url("../img/black-and-white-blank-262488.jpg"); 
+  width: 960 px;
+ 
+
 
 }
 
   
 header {
+  width: 80%;
+  margin: 0%, 10%;
   background-color: rgb(154, 158, 145); 
   border-width: 8px; 
   border-style: groove; 
   border-color: black ;
   border-radius: 5px 10px 5px 10px; /* top, right , bottom left */ 
+  text-align: center;
 }
 
 section {
