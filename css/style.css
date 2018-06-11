@@ -6,13 +6,10 @@ This page styles both color and format of the HTML page
 body {
   background-image: url("../img/black-and-white-blank-262488.jpg"); 
   width: 960 px;
- 
-
-
 }
 
 nav {
-  width: 100%;
+  width: 960 px;
   background-color: #373737;
   color: #DCD0C0;
 }  
@@ -33,46 +30,51 @@ header {
 }
 
 #fillbox1 {
-  border-color: black;
   width : 960px;
-  background-color: aqua;
   height: 450px;
 }
 
 section {
-  
+  float: left;
   width: 320px;
-  border-width: 4px; 
+  border-width: 0px; 
   padding: 10px;
   border-style: solid; 
   border-color: black ;
 }
 
 aside {
-  border-width: 4px; 
-  margin: 10px;
+  float: left;
+  width: 320px;
+  border-width: 0px; 
+  margin: 0px;
   border-style: groove; 
   border-color: black ;
 }
 
 article {
+float: left;
+width: 320px;
 border-width: 4px;
-margin: 10px ;
+margin: 0px ;
 border-style: groove; 
 border-color: black ;
 }
 
 h1 {
-  font-size: 40; 
-  font-family: fantasy; 
+  font-size: 36; 
+  font-family: 'Covered By Your Grace', cursive;
   color: #c0b283 ;
   padding: 5px;
 }
 
 h2 {
-  font-size: 36;
+  font-size: 24;
+  font-family: 'Covered By Your Grace', cursive;
   color: #c0b283 ;
   padding: 5px;
+  position: relative;
+  right : 20 px;
 }
 
 h3 {
@@ -98,11 +100,16 @@ ol {
 }
 
 .ques {
-margin: 0px;
+font-style: bold;
+font-size: 12px
 }
 
 .ans {
 margin: 0px;
+position : relative; 
+right: 15 px;
+font-style : oblique;
+font-size: 10px; 
 }
 
 .job {
