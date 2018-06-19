@@ -15,7 +15,7 @@ var QuesSports = 'So Matthew is from Seattle. Does Matthew watch the M\'s?';
 
 // info/filler for user engagement 2nd pos. persQues 
 var msgCode = 'Prior to CodeFellows, Matthew had never attended a coding school.';
-var msgSign = 'Matthew is not a fire sign. Matthew was born on June 25th which makes him a Cancer and a water sign. Matthew does not palce much value on Zodialogical signs , so you can still be friends (even if you are a fire sign). ';
+var msgSign = 'Matthew is not a fire sign. Matthew was born on June 25th which makes him a Cancer and a water sign. Matthew does not place much value on Zodialogical signs , so you can still be friends (even if you are a fire sign). ';
 var msgCook = 'Matthew enjoys cooking very much and is always looking for a new recipe to try.';
 var msgFrom = 'Matthew is one of the few people in Seattle born in Seattle, but he likes meeting new people no matter where they are from.';
 var msgSports = ' Matthew is not a fan of team sports, so he won\'t be watching the M\'s but he loves a good game.';
@@ -70,7 +70,7 @@ function gameGuess(guess, tries){
   var i = 0;
 
   var randoNum = getRandomInt(guess); 
-  var goodGuess =prompt(newUser + ', I\'d like to play a game . You have ' +tries+ ' tries. Think of a number between 1 and ' +guess+'.', '1-'+guess);
+  var goodGuess =prompt(newUser + ', Shall we play a game? . You have ' +tries+ ' tries. Think of a number between 1 and ' +guess+'.', '1-'+guess);
 
   for (i = 0 ; i < tries ; i++){
   //need to take string and turn to integer
@@ -86,7 +86,7 @@ function gameGuess(guess, tries){
       alert(newUser + ' my number is larger than yours');
       goodGuess = prompt('Try again');
     } else if (intGuess === randoNum){
-      alert (newUser + ' you have the correct number!!!');
+      alert (newUser + ' you have the correct number! ');
       rightCount++; 
       scoreAlert();
       break;
